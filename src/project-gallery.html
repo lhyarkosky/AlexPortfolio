@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+
+    <title>Project Gallery</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.scss" />
+    <script
+      defer
+      src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="top"></div>
+
+    <!-- **** Gallery Section **** -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <h2 class="section-title dark-blue-text">Project Gallery</h2>
+        <div class="gallery-wrapper">
+          <div class="gallery-item load-hidden">
+            <div class="gallery-image-container">
+              <img src="assets/project.jpg" alt="Project Image" class="gallery-image" />
+            </div>
+            <div class="gallery-content">
+              <h3>Project Details</h3>
+              <p>Comprehensive project description, including:</p>
+              <ul>
+                <li>Technologies used</li>
+                <li>Key features</li>
+                <li>Development challenges</li>
+                <li>Solutions implemented</li>
+              </ul>
+              <div class="gallery-links">
+                <a href="https://github.com/yourusername/project" target="_blank" class="cta-btn text-color-main">
+                  <i class="fa fa-github"></i> View Source
+                </a>
+                <a href="https://project-demo.com" target="_blank" class="cta-btn cta-btn--hero">
+                  <i class="fa fa-external-link"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- More gallery items can be added here -->
+        </div>
+        <div class="back-button">
+          <a href="index.html" class="cta-btn cta-btn--hero">
+            <i class="fa fa-arrow-left"></i> Back to Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script defer type="module" src="index.js"></script>
+  </body>
+</html>
