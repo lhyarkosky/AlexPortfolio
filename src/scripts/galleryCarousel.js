@@ -1,7 +1,12 @@
-const CYCLE_INTERVAL = 5000; // 3 seconds
+const CYCLE_INTERVAL = 4000; // 3 seconds
 
-// Function to create a carousel for a given gallery
-function createGalleryCarousel(gallerySelector, itemSelector) {
+/**
+ * Create a carousel for a given gallery
+ * @param {string} gallerySelector - The CSS selector for the gallery
+ * @param {string} itemSelector - The CSS selector for the slides inside the gallery
+ * @param {number} offset - Delay in ms before the carousel starts cycling
+ */
+function createGalleryCarousel(gallerySelector, itemSelector, offset = 0) {
   const gallery = document.querySelector(gallerySelector);
   if (!gallery) return;
 
@@ -17,39 +22,52 @@ function createGalleryCarousel(gallerySelector, itemSelector) {
   const totalSlides = slides.length;
   let currentIndex = 0;
 
-  // Initially hide all slides except the first one
+  // Hide all slides except the first one
   slides.forEach((slide, index) => {
-    if (index !== 0) {
-      slide.style.display = 'none';
-    }
+    slide.style.display = index === 0 ? 'block' : 'none';
   });
 
   // Start cycling if there are multiple slides
   if (totalSlides > 1) {
-    setInterval(() => {
-      // Hide the current slide
-      slides[currentIndex].style.display = 'none';
+    setTimeout(() => {
+      setInterval(() => {
+        // Hide current slide
+        slides[currentIndex].style.display = 'none';
 
-      // Move to the next slide
-      currentIndex = (currentIndex + 1) % totalSlides;
+        // Move to the next slide
+        currentIndex = (currentIndex + 1) % totalSlides;
 
-      // Show the next slide
-      slides[currentIndex].style.display = 'block'; // Assuming block display for slides
-    }, CYCLE_INTERVAL);
+        // Show the next slide
+        slides[currentIndex].style.display = 'block'; // Default block display
+      }, CYCLE_INTERVAL);
+    }, offset);
   }
 }
 
-// Function to initialize all gallery carousels
+/**
+ * Initialize all gallery carousels
+ */
 function initGalleryCarousels() {
-  // Initialize Project Carousels
-  // For Articles Project
-  createGalleryCarousel('#projects .project-wrapper:nth-of-type(1)', '.carousel-slide');
+  // Articles Project (starts immediately)
+  createGalleryCarousel(
+    '#projects .project-wrapper:nth-of-type(1)',
+    '.carousel-slide',
+    0
+  );
 
-  // For Social Media Project
-  createGalleryCarousel('#projects .project-wrapper:nth-of-type(2)', '.carousel-slide');
+  // Social Media Project (starts halfway through the cycle)
+  createGalleryCarousel(
+    '#projects .project-wrapper:nth-of-type(2)',
+    '.carousel-slide',
+    CYCLE_INTERVAL / 2
+  );
 
-  // For Other Project
-  createGalleryCarousel('#projects .project-wrapper:nth-of-type(3)', '.carousel-slide');
+  // Example: Another project with custom offset
+  // createGalleryCarousel(
+  //   '#projects .project-wrapper:nth-of-type(3)',
+  //   '.carousel-slide',
+  //   1000
+  // );
 }
 
 export { initGalleryCarousels };

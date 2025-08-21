@@ -9,6 +9,44 @@ initScrollReveal(targetElements, defaultProps);
 initTiltEffect();
 
 // Function to populate Articles carousel
+function enableResponsiveOverlayBehavior() {
+  const mobileBreakpoint = 768; // px breakpoint for "phone"
+  const articleCards = document.querySelectorAll(".article-card");
+
+  articleCards.forEach(card => {
+    const overlay = card.querySelector(".article-overlay");
+    if (!overlay) return;
+
+    let tappedOnce = false;
+
+    card.addEventListener("click", (e) => {
+      // Apply only on phone-sized screens
+      if (window.innerWidth <= mobileBreakpoint) {
+        if (!tappedOnce) {
+          e.preventDefault(); // stop link on first tap
+          overlay.style.opacity = "1"; // show overlay
+          tappedOnce = true;
+
+          // reset overlay if tapping outside card
+          document.addEventListener("click", function reset(ev) {
+            if (!card.contains(ev.target)) {
+              overlay.style.opacity = "0";
+              tappedOnce = false;
+              document.removeEventListener("click", reset);
+            }
+          });
+        } else {
+          // second tap follows link naturally
+          tappedOnce = false;
+        }
+      }
+    });
+  });
+}
+
+// Run once DOM is ready
+document.addEventListener("DOMContentLoaded", enableResponsiveOverlayBehavior);
+
 function initArticlesCarousel() {
   const maxArticles = 10;
   const track = document.querySelector(
