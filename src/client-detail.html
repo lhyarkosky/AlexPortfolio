@@ -1050,8 +1050,8 @@
         }
         
         .portfolio-item {
-          flex: 0 0 calc(100vw - 3rem);
-          width: calc(100vw - 3rem);
+          flex: 0 0 calc(100vw - 2rem);
+          width: calc(100vw - 2rem);
           min-height: 480px;
         }
         
@@ -1061,7 +1061,7 @@
         
         .portfolio-track {
           gap: 1rem;
-          padding-left: 1.5rem;
+          padding-left: 1rem;
         }
         
         .carousel-controls {
@@ -1399,10 +1399,10 @@
           // Calculate item width and gap based on screen size
           const isMobile = window.innerWidth <= 768;
           
-          // On mobile: full viewport width minus padding
+          // On mobile: scroll by full viewport width (card + gap fills that space)
           // On desktop: fixed 400px + 24px gap
           const itemWidth = isMobile 
-            ? window.innerWidth - 48 + 16 // calc(100vw - 3rem) + 1rem gap
+            ? window.innerWidth // Full viewport width
             : 400 + 24; // item + gap
             
           // Move by one item at a time
