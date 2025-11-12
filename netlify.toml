@@ -1,0 +1,19 @@
+[build]
+  # Directory to change to before starting a build
+  base = "."
+  
+  # Build command Netlify will run
+  command = "npm run build"
+  
+  # Directory that contains the deploy-ready HTML files and assets
+  publish = "dist"
+
+# Redirect rules for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+  
+  # Don't redirect if the file exists
+  conditions = {Role = [""], Country = []}
