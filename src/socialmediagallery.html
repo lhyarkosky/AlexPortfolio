@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
 
-    <title>Social Media Gallery</title>
+    <title>Marketing Portfolio - Client Work</title>
 
     <link
       rel="stylesheet"
@@ -19,12 +19,13 @@
     ></script>
   </head>
   <body>
-    <!-- **** Social Media Gallery Section **** -->
-    <section id="socialmedia-gallery">
+    <!-- **** Marketing Portfolio Section **** -->
+    <section id="clients-gallery">
       <div class="container">
-        <h2 class="section-title dark-blue-text">Social Media Gallery</h2>
-        <div class="gallery-grid" id="socialmedia-container">
-          <!-- Cards injected by JS -->
+        <h2 class="section-title dark-blue-text">Marketing Portfolio</h2>
+        <p class="section-subtitle">Explore our client success stories and see how we've helped businesses grow through strategic marketing and social media.</p>
+        <div class="gallery-grid" id="clients-container">
+          <!-- Client cards injected by JS -->
         </div>
         <div class="back-button">
           <a href="index.html" class="cta-btn cta-btn--hero">
@@ -34,9 +35,130 @@
       </div>
     </section>
 
+    <style>
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .client-card {
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .client-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+      
+      .client-logo {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f9fa;
+        padding: 2rem;
+      }
+      
+      .client-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      .client-placeholder {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+      }
+      
+      .client-overlay {
+        padding: 1.5rem;
+      }
+      
+      .client-overlay h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.4rem;
+        color: #333;
+      }
+      
+      .client-overlay p {
+        margin: 0 0 1rem 0;
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      
+      .client-services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      
+      .service-tag {
+        background: #e3f2fd;
+        color: #1976d2;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+    </style>
+
     <script type="module">
-      import { renderSocialMedia } from "./data/socialmedia.js";
-      renderSocialMedia("#socialmedia-container");
+      import { renderClientsGallery } from "./data/clients.js";
+      
+      // Function to open client detail page
+      function openClientDetail(clientId) {
+        console.log('Opening client detail for:', clientId);
+        // Navigate to client detail page with client ID as parameter
+        window.location.href = `client-detail.html?client=${clientId}`;
+      }
+      
+      // Render the gallery
+      renderClientsGallery("#clients-container");
+      
+      // Add click event listeners to client cards after they're rendered
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+          const clientCards = document.querySelectorAll('.client-card');
+          clientCards.forEach(card => {
+            card.addEventListener('click', function() {
+              const clientId = this.getAttribute('data-client-id');
+              if (clientId) {
+                openClientDetail(clientId);
+              }
+            });
+          });
+        }, 100); // Small delay to ensure cards are rendered
+      });
+      
+      // Also make it available globally for the carousel
+      window.openClientDetail = openClientDetail;
     </script>
   </body>
 </html>
