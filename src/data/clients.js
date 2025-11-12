@@ -3,7 +3,7 @@ const revivedlogo = new URL("../assets/clients/revived/logo.jpg", import.meta.ur
 const clientLogo2 = new URL("../assets/profile.jpg", import.meta.url).href;
 
 // Grid pictures for client headers (keeping only used assets)
-const client1Post1 = new URL("../assets/socialmedia/test.jpg", import.meta.url).href;
+const rev_grid = new URL("../assets/clients/revived/rev_grid.png", import.meta.url).href;
 const client2Post1 = new URL("../assets/articles/dogdays.jpg", import.meta.url).href;
 
 export const clients = [
@@ -11,7 +11,7 @@ export const clients = [
     id: "Revived",
     name: "revIVed Kansas - Mobile IV & IM Therapy ",
     logo: revivedlogo,
-    gridPicture: client1Post1,
+    gridPicture: rev_grid,
     description: "Comprehensive digital marketing campaign for an IV therapy business based in Kansas City.",
     services: ["Social Media Strategy", "Content Creation", "Brand Development", "Paid Advertising", "Email Marketing", "4 posts a week"],
     duration: "8 months",

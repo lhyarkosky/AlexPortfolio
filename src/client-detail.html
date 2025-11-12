@@ -87,28 +87,43 @@
       
       .client-header {
         margin-bottom: 4rem;
+      }
+
+      .client-header-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        gap: 3rem;
+        align-items: start;
+        max-width: 1700px;
+        margin: 0 auto;
+      }
+      
+      .client-header-main {
         padding: 3rem;
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         border-radius: 15px;
+        min-height: 540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       
       .client-header-content {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 3rem;
-        align-items: center;
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
       }
       
       .client-logo-section {
-        text-align: center;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
       }
       
       .client-logo-large {
         width: 120px;
         height: 120px;
-        margin: 0 auto 2rem;
+        margin: 0 0 2rem 0;
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -131,15 +146,31 @@
         font-size: 3rem;
         font-weight: bold;
         color: white;
-        margin: 0 auto 2rem;
+        margin: 0 0 2rem 0;
       }
       
       .client-grid-picture {
-        width: 300px;
-        height: 200px;
-        border-radius: 12px;
+        width: 250px;
+        height: 540px;
+        border-radius: 30px;
         overflow: hidden;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border: 12px solid #1a1a1a;
+        position: relative;
+        flex-shrink: 0;
+      }
+      
+      .client-grid-picture::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 25px;
+        background: #1a1a1a;
+        border-radius: 0 0 15px 15px;
+        z-index: 2;
       }
       
       .client-grid-picture img {
@@ -975,15 +1006,23 @@
       
       /* Responsive Design */
       @media (max-width: 768px) {
-        .client-header-content {
+        .client-header-wrapper {
           grid-template-columns: 1fr;
           gap: 2rem;
+        }
+        
+        .client-logo-section {
           text-align: center;
         }
         
+        .client-logo-large,
+        .client-placeholder-large {
+          margin: 0 auto 2rem;
+        }
+        
         .client-grid-picture {
-          width: 100%;
-          max-width: 300px;
+          width: 200px;
+          height: 432px;
           margin: 0 auto;
         }
         
@@ -1055,26 +1094,30 @@
           : '';
         
         headerContainer.innerHTML = `
-          <div class="client-header-content">
-            <div class="client-logo-section">
-              ${logoHtml}
-              <h1 class="client-name">${client.name}</h1>
-              <p class="client-description">${client.description}</p>
+          <div class="client-header-wrapper">
+            <div class="client-header-main">
+              <div class="client-header-content">
+                <div class="client-logo-section">
+                  ${logoHtml}
+                  <h1 class="client-name">${client.name}</h1>
+                  <p class="client-description">${client.description}</p>
+                </div>
+              </div>
+              <div class="client-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Duration</span>
+                  <span class="meta-value">${client.duration}</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Services</span>
+                  <span class="meta-value">${client.services.length} services</span>
+                </div>
+              </div>
+              <div class="services-list">
+                ${client.services.map(service => `<span class="service-badge">${service}</span>`).join('')}
+              </div>
             </div>
             ${gridPictureHtml}
-          </div>
-          <div class="client-meta">
-            <div class="meta-item">
-              <span class="meta-label">Duration</span>
-              <span class="meta-value">${client.duration}</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Services</span>
-              <span class="meta-value">${client.services.length} services</span>
-            </div>
-          </div>
-          <div class="services-list">
-            ${client.services.map(service => `<span class="service-badge">${service}</span>`).join('')}
           </div>
         `;
         
