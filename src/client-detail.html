@@ -1037,7 +1037,7 @@
 
         .portfolio-carousel-container {
           max-width: 100%;
-          padding: 0 1rem;
+          overflow: hidden;
         }
 
         .portfolio-carousel {
@@ -1045,12 +1045,13 @@
           padding-right: 0;
           margin-left: 0;
           margin-right: 0;
-          overflow: visible;
+          padding-bottom: 50px;
+          margin-bottom: -50px;
         }
         
         .portfolio-item {
-          flex: 0 0 350px;
-          width: 350px;
+          flex: 0 0 calc(100vw - 3rem);
+          width: calc(100vw - 3rem);
           min-height: 480px;
         }
         
@@ -1060,10 +1061,12 @@
         
         .portfolio-track {
           gap: 1rem;
+          padding-left: 1.5rem;
         }
         
         .carousel-controls {
-          max-width: 300px;
+          max-width: 100%;
+          padding: 0 1rem;
         }
         
         .carousel-indicators {
@@ -1395,7 +1398,13 @@
         function updateCarousel() {
           // Calculate item width and gap based on screen size
           const isMobile = window.innerWidth <= 768;
-          const itemWidth = isMobile ? 350 + 16 : 400 + 24; // item + gap
+          
+          // On mobile: full viewport width minus padding
+          // On desktop: fixed 400px + 24px gap
+          const itemWidth = isMobile 
+            ? window.innerWidth - 48 + 16 // calc(100vw - 3rem) + 1rem gap
+            : 400 + 24; // item + gap
+            
           // Move by one item at a time
           const moveDistance = currentIndex * itemWidth;
           track.style.transform = `translateX(-${moveDistance}px)`;
