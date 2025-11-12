@@ -34,7 +34,7 @@ export const clients = [
         title: "Facebook Community Building",
         description: "Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries. Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries. Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries.",
         link: "https://www.instagram.com/p/DQwtvEvjut4/",
-        previewImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        previewImage: "https://scontent.cdninstagram.com/v/t51.82787-15/572927808_17896895157340672_4073057200276382013_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzc2MDcwNjgzNTg1NTYzMzI3Mg%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNTB4MTY4OC5zZHIuQzMifQ%3D%3D&_nc_ohc=ipr4RiJdYfEQ7kNvwFppLki&_nc_oc=AdmRuLJfmeg0KZoIFaBlXpcZN1FdHyQZwndsM2QluP7z6udw7U-8KMlm0eVx76uiGgg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=2hydEOuC2i4JWy6QeT2jZA&oh=00_Afgk2KnKSt6Y1HqZ31cxElqeUbwWpJHS5Yh-NP5wLEVNyQ&oe=691A7210",
         authorName: "revIVed Kansas", 
         authorUsername: "@revivedkansas",
         postText: "🩺 Did you know IV therapy can help with hangovers, fatigue, and immune support? Our certified nurses use premium ingredients to help you feel your best. Questions about the process? Drop them below! 👇 #HealthEducation #IVTherapy #Hydration"
@@ -45,9 +45,7 @@ export const clients = [
         title: "LinkedIn Professional Networking",
         description: "Strategic LinkedIn content highlighting wellness industry expertise and business growth. Generated 25+ business inquiries and established thought leadership in mobile IV therapy space.",
         link: "https://www.linkedin.com/posts/revived-kansas-example",
-        previewImage: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        authorName: "Sarah Johnson",
-        authorTitle: "Founder & CEO at revIVed Kansas",
+        previewImage: "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
         postText: "The mobile wellness industry is rapidly evolving. As healthcare professionals, we're seeing increased demand for convenient, personalized treatments. Our IV therapy services have helped over 500 clients improve their wellness routines. Key insights from our first year..."
       },
       {
@@ -56,7 +54,7 @@ export const clients = [
         title: "TikTok Viral Health Tips",
         description: "Educational TikTok content about IV therapy benefits and wellness tips. One video achieved 150K+ views, significantly boosting brand awareness among target demographic.",
         link: "https://www.tiktok.com/@revivedkansas/video/7570579861958348046",
-        previewImage: "https://images.unsplash.com/photo-1594824388853-c20594dcff04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        previewImage: "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
         authorName: "revIVed Kansas",
         authorUsername: "@revivedkansas",
         postText: "POV: You're getting IV therapy for the first time 💧✨ The process is so relaxing and the energy boost is REAL! #IVTherapy #Wellness #SelfCare #Kansas #Health"
