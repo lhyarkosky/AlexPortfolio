@@ -1033,6 +1033,8 @@
     </style>
 
     <script type="module">
+      import { getClientById } from "./data/clients.js";
+
       // Define the render function first
       function renderClientDetail(client) {
         console.log('Rendering client detail for:', client.name);
@@ -1613,47 +1615,23 @@
       }
 
       // Load client data and render
-      async function loadClient() {
-        try {
-          console.log('Starting to load client module...');
-          const clientsModule = await import("./data/clients.js");
-          console.log('Module loaded:', clientsModule);
-          
-          const { getClientById, clients } = clientsModule;
-          console.log('Available clients:', clients ? clients.length : 'undefined');
-          console.log('getClientById function:', typeof getClientById);
-          
-          // Get client ID from URL parameter
-          const urlParams = new URLSearchParams(window.location.search);
-          const clientId = urlParams.get('client');
-          
-          console.log('Client ID from URL:', clientId);
-          
-          if (!clientId) {
-            console.log('No client ID provided, redirecting...');
-            setTimeout(() => window.location.href = 'socialmediagallery.html', 1000);
-            return;
-          }
-          
-          if (!getClientById) {
-            console.error('getClientById function not found in module');
-            setTimeout(() => window.location.href = 'socialmediagallery.html', 1000);
-            return;
-          }
-          
-          const client = getClientById(clientId);
-          console.log('Found client:', client);
-          
-          if (client) {
-            renderClientDetail(client);
-          } else {
-            console.log('Client not found with ID:', clientId);
-            console.log('Available client IDs:', clients ? clients.map(c => c.id) : 'none');
-            setTimeout(() => window.location.href = 'socialmediagallery.html', 1000);
-          }
-        } catch (error) {
-          console.error('Error loading clients module:', error);
-          console.error('Error stack:', error.stack);
+      function loadClient() {
+        // Get client ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const clientId = urlParams.get('client');
+        
+        if (!clientId) {
+          console.log('No client ID provided, redirecting...');
+          setTimeout(() => window.location.href = 'socialmediagallery.html', 1000);
+          return;
+        }
+        
+        const client = getClientById(clientId);
+        
+        if (client) {
+          renderClientDetail(client);
+        } else {
+          console.log('Client not found with ID:', clientId);
           setTimeout(() => window.location.href = 'socialmediagallery.html', 1000);
         }
       }

@@ -1,10 +1,10 @@
 // Using existing assets for client examples
-import revivedlogo from "../assets/clients/revived/logo.jpg";
-import clientLogo2 from "../assets/profile.jpg";
+const revivedlogo = new URL("../assets/clients/revived/logo.jpg", import.meta.url).href;
+const clientLogo2 = new URL("../assets/profile.jpg", import.meta.url).href;
 
 // Grid pictures for client headers (keeping only used assets)
-import client1Post1 from "../assets/socialmedia/test.jpg";
-import client2Post1 from "../assets/articles/dogdays.jpg";
+const client1Post1 = new URL("../assets/socialmedia/test.jpg", import.meta.url).href;
+const client2Post1 = new URL("../assets/articles/dogdays.jpg", import.meta.url).href;
 
 export const clients = [
   {
