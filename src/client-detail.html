@@ -1401,18 +1401,20 @@
         }
         
         function updateCarousel() {
-          // Calculate item width and gap based on screen size
           const isMobile = window.innerWidth <= 768;
           
-          // On mobile: scroll by full viewport width (card + gap fills that space)
-          // On desktop: fixed 400px + 24px gap
-          const itemWidth = isMobile 
-            ? window.innerWidth // Full viewport width
-            : 400 + 24; // item + gap
-            
-          // Move by one item at a time
-          const moveDistance = currentIndex * itemWidth;
-          track.style.transform = `translateX(-${moveDistance}px)`;
+          if (isMobile) {
+            // On mobile: center the current card
+            const card = portfolioItems[currentIndex];
+            if (card) {
+              card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+          } else {
+            // On desktop: use the existing calculation
+            const itemWidth = 400 + 24; // item + gap
+            const moveDistance = currentIndex * itemWidth;
+            track.style.transform = `translateX(-${moveDistance}px)`;
+          }
           
           // Update indicators (circular)
           document.querySelectorAll('.indicator').forEach((indicator, index) => {
