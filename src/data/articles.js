@@ -113,6 +113,7 @@ export function renderArticles(containerSelector) {
           </div>
           <div class="article-overlay">
             <h3>${article.description}</h3>
+            <p class="click-to-view">Click to view article</p>
           </div>
         </a>
       `;

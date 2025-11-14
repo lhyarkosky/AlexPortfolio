@@ -1400,14 +1400,21 @@
           indicatorsContainer.appendChild(indicator);
         }
         
-        function updateCarousel() {
+        function updateCarousel(isUserAction = false) {
           const isMobile = window.innerWidth <= 768;
           
           if (isMobile) {
-            // On mobile: center the current card
-            const card = portfolioItems[currentIndex];
-            if (card) {
-              card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            // On mobile: always update the transform, but only scrollIntoView if user action
+            if (isUserAction) {
+              const card = portfolioItems[currentIndex];
+              if (card) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              }
+            } else {
+              // For auto-advance, just update transform without scrolling the page
+              const cardWidth = window.innerWidth; // Full viewport width per card
+              const moveDistance = currentIndex * cardWidth;
+              track.style.transform = `translateX(-${moveDistance}px)`;
             }
           } else {
             // On desktop: use the existing calculation
@@ -1428,25 +1435,25 @@
         
         function goToSlide(index) {
           currentIndex = index;
-          updateCarousel();
+          updateCarousel(true);
         }
         
-        function nextSlide() {
+        function nextSlide(isUserAction = false) {
           const isMobile = window.innerWidth <= 768;
           const maxIndex = isMobile ? totalItems - 1 : Math.max(0, totalItems - 3);
           currentIndex = (currentIndex + 1) % (maxIndex + 1);
-          updateCarousel();
+          updateCarousel(isUserAction);
         }
         
         function prevSlide() {
           const isMobile = window.innerWidth <= 768;
           const maxIndex = isMobile ? totalItems - 1 : Math.max(0, totalItems - 3);
           currentIndex = (currentIndex - 1 + (maxIndex + 1)) % (maxIndex + 1);
-          updateCarousel();
+          updateCarousel(true);
         }
         
         // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
+        nextBtn.addEventListener('click', () => nextSlide(true));
         prevBtn.addEventListener('click', prevSlide);
         
         // Auto-advance every 4 seconds (circular)

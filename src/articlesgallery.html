@@ -37,6 +37,31 @@
     <script type="module">
       import { renderArticles } from "./data/articles.js";
       renderArticles("#gallery-container");
+
+      // Show overlay on mobile when scrolling into view
+      if (window.innerWidth <= 768) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            const overlay = entry.target.querySelector('.article-overlay');
+            if (overlay) {
+              if (entry.isIntersecting) {
+                overlay.style.opacity = '1';
+              } else {
+                overlay.style.opacity = '0';
+              }
+            }
+          });
+        }, {
+          threshold: 0.5 // Show overlay when 50% of card is visible
+        });
+
+        // Observe all article cards
+        setTimeout(() => {
+          document.querySelectorAll('.article-card').forEach(card => {
+            observer.observe(card);
+          });
+        }, 100);
+      }
     </script>
   </body>
 </html>
