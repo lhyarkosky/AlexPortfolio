@@ -1404,18 +1404,10 @@
           const isMobile = window.innerWidth <= 768;
           
           if (isMobile) {
-            // On mobile: always update the transform, but only scrollIntoView if user action
-            if (isUserAction) {
-              const card = portfolioItems[currentIndex];
-              if (card) {
-                card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-              }
-            } else {
-              // For auto-advance, just update transform without scrolling the page
-              const cardWidth = window.innerWidth; // Full viewport width per card
-              const moveDistance = currentIndex * cardWidth;
-              track.style.transform = `translateX(-${moveDistance}px)`;
-            }
+            // On mobile: use transform for consistent behavior
+            const cardWidth = window.innerWidth; // Full viewport width per card
+            const moveDistance = currentIndex * cardWidth;
+            track.style.transform = `translateX(-${moveDistance}px)`;
           } else {
             // On desktop: use the existing calculation
             const itemWidth = 400 + 24; // item + gap
