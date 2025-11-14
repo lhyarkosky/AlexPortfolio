@@ -14,9 +14,32 @@ const cartheft = new URL("../assets/articles/cartheft.jpg", import.meta.url).hre
 const oncampushouse = new URL("../assets/articles/oncampushouse.jpg", import.meta.url).href;
 const freshmanwya = new URL("../assets/articles/freshmanwya.jpg", import.meta.url).href;
 const fallactivities = new URL("../assets/articles/fallactivities.jpg", import.meta.url).href;
-
+const lifeofpi = new URL("../assets/articles/LifeOfPi.jpg", import.meta.url).href;
+const fambusiness = new URL("../assets/articles/fambusiness.jpg", import.meta.url).href;
+const lyricopera = new URL("../assets/articles/lyricopera.jpg", import.meta.url).href;
+const chinesegame = new URL("../assets/articles/chinesegame.jpg", import.meta.url).href;
 // articles.js
 export const articles = [
+  {
+    href: "https://kansascitymag.com/this-19th-century-chinese-game-is-making-a-comeback-across-the-country-and-here-in-kc/",
+    description: "Authored 'This 19th-century Chinese game is making a comeback across the country and here in KC' for Kansas City Magazine",
+    img: chinesegame
+  },
+  {
+    href: "https://kansascitymag.com/lyric-opera-of-kansas-citys-production-team-brings-cinderella-to-life/",
+    description: "Authored 'Lyric Opera of Kansas City’s Production Team Brings Cinderella to Life' for Kansas City Magazine",
+    img: lyricopera
+  },
+  {
+    href: "https://kansascitymag.com/this-family-business-is-a-window-into-the-rich-history-of-hand-loomed-carpets/",
+    description: "Authored 'This family business is a window into the rich history of hand-loomed carpets' for Kansas City Magazine",
+    img: fambusiness
+  },
+  {
+    href: "https://kansascitymag.com/theatre/",
+    description: "Authored 'Theatre' for Kansas City Magazine",
+    img: lifeofpi
+  },
   {
     href: "https://kansascitymag.com/the-five-senses/",
     description: "Authored 'KU Med Students Learn to Treat With Food, Not Just Prescriptions' and 'Nelson-Atkins Brings Color to All With EnChroma Glasses' for Kansas City Magazine",
