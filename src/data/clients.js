@@ -3,10 +3,33 @@ const revivedlogo = new URL("../assets/clients/revived/logo.jpg", import.meta.ur
 const clientLogo2 = new URL("../assets/profile.jpg", import.meta.url).href;
 
 // Grid pictures for client headers (keeping only used assets)
+
+//Guided:
+const guided_grid= new URL("../assets/clients/guidedbyg/guided_grid.jpg", import.meta.url).href;
+const guided_logo = new URL("../assets/clients/guidedbyg/guided_logo.jpg", import.meta.url).href;
+//Revived
 const rev_grid = new URL("../assets/clients/revived/rev_grid.png", import.meta.url).href;
-const client2Post1 = new URL("../assets/articles/dogdays.jpg", import.meta.url).href;
+const november= new URL("../assets/clients/revived/november.png", import.meta.url).href;
+const thisweek = new URL("../assets/clients/revived/thisweek.png", import.meta.url).href;
+// Ignite
+const ignite_grid = new URL("../assets/clients/ignite/ignite_grid.jpg", import.meta.url).href;
+const ignite_logo = new URL("../assets/clients/ignite/ignite_logo.jpg", import.meta.url).href;
 
 export const clients = [
+
+  //Guided
+  { id: "guidedbyg",
+    name: "Guided By G",
+    logo: guided_logo,
+    gridPicture: guided_grid,
+    description: "Maintaining and updating the instagram account for this Kansas City-based marketing agency.",
+    services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
+    duration:["Ongoing"],
+    results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
+    portfolio:[]
+  },
+
+  //Revived
   {
     id: "Revived",
     name: "revIVed Kansas - Mobile IV & IM Therapy ",
@@ -23,7 +46,7 @@ export const clients = [
         title: "Instagram Brand Awareness Campaign", 
         description: "Comprehensive Instagram strategy featuring lifestyle content, IV therapy education, and customer testimonials. Achieved 89% engagement rate increase and 340% follower growth over 4 months.",
         link: "https://www.instagram.com/p/DQ4m4J5j1wo/?img_index=1",
-        previewImage: "https://scontent.cdninstagram.com/v/t51.82787-15/581669672_17897525235340672_6843791206914874445_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc2MjkyODQ2MTQxMDE5Mzc5NA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=CeaOBiDgRVkQ7kNvwH2HYkG&_nc_oc=AdmVoKasp1_CpOMLPuiKSGfOnH3n2yj5o6hjGFgNgIC_KYPfftaayPgC1nFoXARI9p4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=z6DRrQ2uH6r4oefX0CFpwg&oh=00_Afgj-KXw_JnNEUjHp-K3SdoFp4zA3bq4xW9v8PijSQSkGQ&oe=691A907B",
+        previewImage: november,
         authorName: "revIVed Kansas",
         authorUsername: "@revivedks_mobileivtherapy",
         postText: "It’s “No”vember at RevIVed. A month to say no to stress and yes to steady wellness that fits your schedule. Comment below what you’re saying no to this November to feel your best. 👇 #RevIVed #November #fall #imtherapy #kansascity #mobileivetherapy",
@@ -31,13 +54,13 @@ export const clients = [
       {
         type: "social-media",
         platform: "instagram",
-        title: "Facebook Community Building",
+        title: "post2",
         description: "Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries. Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries. Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries.",
         link: "https://www.instagram.com/p/DQwtvEvjut4/",
-        previewImage: "https://scontent.cdninstagram.com/v/t51.82787-15/572927808_17896895157340672_4073057200276382013_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mzc2MDcwNjgzNTg1NTYzMzI3Mg%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNTB4MTY4OC5zZHIuQzMifQ%3D%3D&_nc_ohc=ipr4RiJdYfEQ7kNvwFppLki&_nc_oc=AdmRuLJfmeg0KZoIFaBlXpcZN1FdHyQZwndsM2QluP7z6udw7U-8KMlm0eVx76uiGgg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=2hydEOuC2i4JWy6QeT2jZA&oh=00_Afgk2KnKSt6Y1HqZ31cxElqeUbwWpJHS5Yh-NP5wLEVNyQ&oe=691A7210",
+        previewImage: thisweek,
         authorName: "revIVed Kansas", 
-        authorUsername: "@revivedkansas",
-        postText: "🩺 Did you know IV therapy can help with hangovers, fatigue, and immune support? Our certified nurses use premium ingredients to help you feel your best. Questions about the process? Drop them below! 👇 #HealthEducation #IVTherapy #Hydration"
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "Revived + ready, KS! All of our injections are available this Tuesday, 4:30–7 at our IM Pop-Up Bar. Stop by and support our friends @healthsolutionskc 🤍💉#injections #IMtherapy #RevIVed #wellness #kansascity #popupbar"
       },
       {
         type: "social-media",
@@ -56,7 +79,7 @@ export const clients = [
         link: "https://www.tiktok.com/@revivedkansas/video/7570579861958348046",
         previewImage: "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
         authorName: "revIVed Kansas",
-        authorUsername: "@revivedkansas",
+        authorUsername: "@revivedks_mobileivtherapy",
         postText: "POV: You're getting IV therapy for the first time 💧✨ The process is so relaxing and the energy boost is REAL! #IVTherapy #Wellness #SelfCare #Kansas #Health"
       },
       {
@@ -85,29 +108,18 @@ export const clients = [
       },    
     ]
   },
+  //Ignite
   {
-    id: "local-restaurant-chain",
-    name: "Harvest & Hearth Restaurants",
-    logo: clientLogo2,
-    gridPicture: client2Post1,
-    description: "Complete digital transformation for a farm-to-table restaurant group expanding from 2 to 7 locations across the metro area.",
-    services: ["Social Media Management", "Professional Food Photography", "Local SEO", "Influencer Partnerships", "Event Marketing"],
-    duration: "14 months",
-    results: "65% increase in reservations, 120% growth in online ordering, successful launch of 5 new locations with avg. 40% higher opening week sales than projected",
-    portfolio: [
-      {
-        type: "link-preview",
-        title: "Seasonal Menu Launch Campaign",
-        description: "Developed compelling visual storytelling for quarterly seasonal menu launches, highlighting local farm partnerships and ingredient sourcing. Each campaign generated 15,000+ social media engagements and drove 25% increase in new menu item sales within the first month.",
-        link: "https://www.instagram.com/p/harvest-hearth-seasonal-menu"
-      },
-      {
-        type: "link-preview", 
-        title: "Chef's Table Documentary Series",
-        description: "Created intimate behind-the-scenes content showcasing the chef's daily market visits, cooking process, and restaurant philosophy. This authentic storytelling approach built deep emotional connections with customers and positioned the restaurants as genuine farm-to-table destinations rather than just trendy spots.",
-        link: "https://www.youtube.com/watch?v=chefs-table-documentary"
-      }
-    ]
+    id: "Ignite",
+    name: "Ignite Chiropractic and Wellness Clinic",
+    logo: ignite_logo,
+    gridPicture: ignite_grid,
+    description: "Developed and executed a multi-channel digital marketing strategy for a chiropractic and wellness clinic in Kansas City.",
+    services: ["Social Media Management", "Content Creation", "Paid Advertising", "Email Marketing"],
+    duration: "Ongoing",
+    results: "Generated __ social impressions, increased overall following by over __%.",
+    portfolio: []
+
   }
 ];
 

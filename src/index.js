@@ -58,9 +58,17 @@ function initArticlesCarousel() {
     const slide = document.createElement("div");
     slide.className = "carousel-slide";
 
+    // image display options: allow per-article overrides
+    const aspect = article.imgAspect || (article.imgOptions && article.imgOptions.aspect) || "3520/1980";
+    const objectFit = article.imgObjectFit || (article.imgOptions && article.imgOptions.objectFit) || "cover";
+    const objectPosition = article.imgObjectPosition || (article.imgOptions && article.imgOptions.objectPosition) || "center";
+    const mediaBackground = article.mediaBackground || (article.imgOptions && article.imgOptions.background) || "";
+    const imgMaxWidth = article.imgMaxWidth || (article.imgOptions && article.imgOptions.maxWidth) || "100%";
+    const imgMaxHeight = article.imgMaxHeight || (article.imgOptions && article.imgOptions.maxHeight) || "100%";
+
     const media = article.img
-      ? `<div style="width:100%; aspect-ratio:3520/1980; overflow:hidden;">
-           <img src="${article.img}" alt="${article.description}" style="width:100%; height:100%; object-fit:cover;" />
+      ? `<div style="width:100%; aspect-ratio:${aspect}; overflow:hidden; ${mediaBackground ? 'background:'+mediaBackground+';' : ''}">
+           <img src="${article.img}" alt="${article.description}" style="width:100%; height:100%; object-fit:${objectFit}; object-position:${objectPosition}; max-width:${imgMaxWidth}; max-height:${imgMaxHeight};" />
          </div>`
       : `<i class="${article.icon}"></i>`;
 
@@ -70,7 +78,7 @@ function initArticlesCarousel() {
           ${media}
         </div>
         <div class="article-overlay">
-          <h3 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          <h3 style="white-space: normal; overflow-wrap: anywhere; word-break: break-word;">
             ${article.description}
           </h3>
         </div>
@@ -94,11 +102,20 @@ function initMarketingCarousel() {
     const slide = document.createElement("div");
     slide.className = "carousel-slide";
 
+
+    // allow per-client overrides for logo/media
+    const clientAspect = client.logoAspect || (client.imgOptions && client.imgOptions.aspect) || "3520/1980";
+    const clientObjectFit = client.logoObjectFit || (client.imgOptions && client.imgOptions.objectFit) || "contain";
+    const clientObjectPosition = client.logoObjectPosition || (client.imgOptions && client.imgOptions.objectPosition) || "center";
+    const clientMediaBackground = client.mediaBackground || (client.imgOptions && client.imgOptions.background) || "#f8f9fa";
+    const clientImgMaxWidth = client.logoMaxWidth || (client.imgOptions && client.imgOptions.maxWidth) || "80%";
+    const clientImgMaxHeight = client.logoMaxHeight || (client.imgOptions && client.imgOptions.maxHeight) || "80%";
+
     const media = client.logo
-      ? `<div style="width:100%; aspect-ratio:3520/1980; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#f8f9fa;">
-           <img src="${client.logo}" alt="${client.name} logo" style="max-width:80%; max-height:80%; object-fit:contain;" />
+      ? `<div style="width:100%; aspect-ratio:${clientAspect}; overflow:hidden; display:flex; align-items:center; justify-content:center; background:${clientMediaBackground};">
+           <img src="${client.logo}" alt="${client.name} logo" style="max-width:${clientImgMaxWidth}; max-height:${clientImgMaxHeight}; object-fit:${clientObjectFit}; object-position:${clientObjectPosition};" />
          </div>`
-      : `<div style="width:100%; aspect-ratio:3520/1980; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; font-size:3rem; font-weight:bold;">
+      : `<div style="width:100%; aspect-ratio:${clientAspect}; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; font-size:3rem; font-weight:bold;">
            ${client.name.charAt(0)}
          </div>`;
 
@@ -108,10 +125,10 @@ function initMarketingCarousel() {
           ${media}
         </div>
         <div class="article-overlay">
-          <h3 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          <h3 style="white-space: normal; overflow-wrap: anywhere; word-break: break-word;">
             ${client.name}
           </h3>
-          <p style="font-size:0.9rem; margin-top:0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          <p style="font-size:0.9rem; margin-top:0.5rem; white-space: normal; overflow-wrap: anywhere; word-break: break-word;">
             ${client.services.slice(0, 2).join(', ')}${client.services.length > 2 ? '...' : ''}
           </p>
         </div>

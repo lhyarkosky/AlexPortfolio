@@ -1263,7 +1263,8 @@
               
               const linkUrl = item.link || '#';
               const linkTarget = item.link ? 'target="_blank" rel="noopener noreferrer"' : '';
-              
+
+              // For client detail carousel we only want the social-media preview (no extra info)
               return `
                 <a href="${linkUrl}" ${linkTarget} class="portfolio-item-link">
                   <div class="portfolio-item">
@@ -1272,12 +1273,6 @@
                       <div class="preview-overlay">
                         <i class="fa fa-external-link"></i>
                       </div>
-                    </div>
-                    <div class="portfolio-info">
-                      <h4 class="portfolio-title">${item.title}</h4>
-                      <p class="portfolio-description" data-full-text="${item.description.replace(/"/g, '&quot;')}">${item.description}</p>
-                      <button class="expand-text-btn" aria-label="Expand text">Read more ▼</button>
-                      <button class="collapse-text-btn" aria-label="Collapse text">▲</button>
                     </div>
                   </div>
                 </a>
@@ -1315,37 +1310,42 @@
               const expandBtn = item.querySelector('.expand-text-btn');
               const collapseBtn = item.querySelector('.collapse-text-btn');
               const description = item.querySelector('.portfolio-description');
-              
+
+              // Only add expand/collapse behavior if this item has a description (non-social-media items)
+              if (!description || !expandBtn || !collapseBtn) return;
+
               // Check if text is actually truncated
               const isTruncated = description.scrollHeight > description.clientHeight + 5;
-              
+
               if (!isTruncated) {
                 // Hide expand button if text fits
                 expandBtn.style.display = 'none';
               }
-              
+
               // Expand button functionality
               expandBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 item.classList.add('expanded');
               });
-              
+
               // Collapse button functionality
               collapseBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 item.classList.remove('expanded');
               });
-              
+
               // Prevent link navigation when clicking on info section of expanded items
               const portfolioInfo = item.querySelector('.portfolio-info');
-              portfolioInfo.addEventListener('click', (e) => {
-                if (item.classList.contains('expanded')) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                }
-              });
+              if (portfolioInfo) {
+                portfolioInfo.addEventListener('click', (e) => {
+                  if (item.classList.contains('expanded')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                  }
+                });
+              }
             });
           }, 100);
           
