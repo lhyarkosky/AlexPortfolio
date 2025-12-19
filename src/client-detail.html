@@ -298,6 +298,11 @@
         position: relative;
         z-index: 1;
       }
+
+      /* Compact card variant used when only preview is shown */
+      .portfolio-item.compact {
+        min-height: 350px; /* match preview/image height to eliminate extra whitespace */
+      }
       
       .portfolio-item.expanded {
         min-height: auto;
@@ -504,7 +509,7 @@
 
       /* Link Preview Styles */
       .portfolio-preview {
-        height: 350px;
+        height: 420px; /* taller preview to keep full image large even with contain */
         flex-shrink: 0;
         border-radius: 10px;
         overflow: hidden;
@@ -540,17 +545,20 @@
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
+        align-items: stretch; /* allow post to fill */
         justify-content: center;
         background: #fafafa;
-        padding: 0.5rem;
+        padding: 0; /* remove extra padding that shrinks the image */
       }
 
       .instagram-post {
         background: white;
         border-radius: 8px;
         width: 100%;
-        max-width: 280px;
+        max-width: 100%; /* allow full width */
+        height: 100%; /* fill preview box */
+        display: flex;
+        flex-direction: column;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         overflow: hidden;
       }
@@ -581,14 +589,17 @@
       .instagram-image-container {
         position: relative;
         width: 100%;
-        height: 120px;
+        flex: 1; /* image area takes remaining height */
+        min-height: 0; /* allow proper flex sizing */
         overflow: hidden;
       }
 
       .instagram-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain; /* show full image without cropping top/bottom */
+        object-position: center;
+        background: #fafafa;
       }
 
       .instagram-actions {
@@ -1037,7 +1048,13 @@
 
         .portfolio-carousel-container {
           max-width: 100%;
-          overflow: hidden;
+          overflow: visible;
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
         }
 
         .portfolio-carousel {
@@ -1047,12 +1064,18 @@
           margin-right: 0;
           padding-bottom: 50px;
           margin-bottom: -50px;
+          overflow-x: clip;
         }
         
         .portfolio-item {
-          flex: 0 0 calc(100vw - 2rem);
-          width: calc(100vw - 2rem);
+          flex: 0 0 100vw;
+          width: 100vw;
           min-height: 480px;
+          box-sizing: border-box;
+        }
+        
+        .portfolio-item.compact {
+          min-height: 420px; /* match increased preview height for mobile */
         }
         
         .portfolio-item.expanded {
@@ -1060,8 +1083,8 @@
         }
         
         .portfolio-track {
-          gap: 1rem;
-          padding-left: 1rem;
+          gap: 0;
+          padding-left: 0;
         }
         
         .carousel-controls {
@@ -1267,7 +1290,7 @@
               // For client detail carousel we only want the social-media preview (no extra info)
               return `
                 <a href="${linkUrl}" ${linkTarget} class="portfolio-item-link">
-                  <div class="portfolio-item">
+                  <div class="portfolio-item compact">
                     <div class="portfolio-preview">
                       ${embedContent}
                       <div class="preview-overlay">
@@ -1281,17 +1304,12 @@
               const linkUrl = item.link || '#';
               const linkTarget = item.link ? 'target="_blank" rel="noopener noreferrer"' : '';
               
+              // For consistency with social-media cards, render only the visual preview (no extra info)
               return `
                 <a href="${linkUrl}" ${linkTarget} class="portfolio-item-link">
-                  <div class="portfolio-item">
+                  <div class="portfolio-item compact">
                     <div class="portfolio-image">
-                      <img src="${item.src}" alt="${item.title}" />
-                    </div>
-                    <div class="portfolio-info">
-                      <h4 class="portfolio-title">${item.title}</h4>
-                      <p class="portfolio-description" data-full-text="${item.description.replace(/"/g, '&quot;')}">${item.description}</p>
-                      <button class="expand-text-btn" aria-label="Expand text">Read more ▼</button>
-                      <button class="collapse-text-btn" aria-label="Collapse text">▲</button>
+                      <img src="${item.src || ''}" alt="${item.title || 'Preview'}" />
                     </div>
                   </div>
                 </a>

@@ -1,6 +1,3 @@
-// Using existing assets for client examples
-const revivedlogo = new URL("../assets/clients/revived/logo.jpg", import.meta.url).href;
-const clientLogo2 = new URL("../assets/profile.jpg", import.meta.url).href;
 
 // Grid pictures for client headers (keeping only used assets)
 
@@ -9,15 +6,27 @@ const guided_grid= new URL("../assets/clients/guidedbyg/guided_grid.jpg", import
 const guided_logo = new URL("../assets/clients/guidedbyg/guided_logo.jpg", import.meta.url).href;
 //Revived
 const rev_grid = new URL("../assets/clients/revived/rev_grid.png", import.meta.url).href;
+const revivedlogo = new URL("../assets/clients/revived/logo.jpg", import.meta.url).href;
 const november= new URL("../assets/clients/revived/november.png", import.meta.url).href;
 const thisweek = new URL("../assets/clients/revived/thisweek.png", import.meta.url).href;
+const rev_post3 = new URL("../assets/clients/revived/rev_post3.png", import.meta.url).href;
+const rev_post4 = new URL("../assets/clients/revived/rev_post4.png", import.meta.url).href;
+const rev_post5 = new URL("../assets/clients/revived/rev_post5.png", import.meta.url).href;
+const rev_post6 = new URL("../assets/clients/revived/rev_post6.png", import.meta.url).href;
+const rev_post7 = new URL("../assets/clients/revived/rev_post7.png", import.meta.url).href;
+const rev_post8 = new URL("../assets/clients/revived/rev_post8.png", import.meta.url).href;
+const rev_post9 = new URL("../assets/clients/revived/rev_post9.png", import.meta.url).href;
+const rev_post10 = new URL("../assets/clients/revived/rev_post10.png", import.meta.url).href;
+
 // Ignite
 const ignite_grid = new URL("../assets/clients/ignite/ignite_grid.jpg", import.meta.url).href;
 const ignite_logo = new URL("../assets/clients/ignite/ignite_logo.jpg", import.meta.url).href;
+const ign_post1 = new URL("../assets/clients/ignite/ign_post1.png", import.meta.url).href;
+const ign_post2 = new URL("../assets/clients/ignite/ign_post2.png", import.meta.url).href;
 
 export const clients = [
 
-  //Guided
+  // #region Guided
   { id: "guidedbyg",
     name: "Guided By G",
     logo: guided_logo,
@@ -28,8 +37,8 @@ export const clients = [
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[]
   },
-
-  //Revived
+  // #endregion
+  // #region Revived
   {
     id: "Revived",
     name: "revIVed Kansas - Mobile IV & IM Therapy ",
@@ -55,7 +64,7 @@ export const clients = [
         type: "social-media",
         platform: "instagram",
         title: "post2",
-        description: "Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries. Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries. Created engaging Facebook content focusing on health education and community engagement. Posts averaged 150+ likes with strong conversion to booking inquiries.",
+        description: "",
         link: "https://www.instagram.com/p/DQwtvEvjut4/",
         previewImage: thisweek,
         authorName: "revIVed Kansas", 
@@ -64,51 +73,97 @@ export const clients = [
       },
       {
         type: "social-media",
-        platform: "linkedin",
-        title: "LinkedIn Professional Networking",
-        description: "Strategic LinkedIn content highlighting wellness industry expertise and business growth. Generated 25+ business inquiries and established thought leadership in mobile IV therapy space.",
-        link: "https://www.linkedin.com/posts/revived-kansas-example",
-        previewImage: "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
-        postText: "The mobile wellness industry is rapidly evolving. As healthcare professionals, we're seeing increased demand for convenient, personalized treatments. Our IV therapy services have helped over 500 clients improve their wellness routines. Key insights from our first year..."
+        platform: "instagram",
+        title: "post3",
+        description: "",
+        link: "https://www.instagram.com/p/DPebLRdkVa4/?img_index=1",
+        previewImage: rev_post3,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "Glowy skin, yes. But also: immune support, protection against oxidative stress, detox, and anti-aging. This little IM shot packs a big punch. ✨💉",
+      },    
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post4",
+        description: "",
+        link: "https://www.instagram.com/p/DQM4bQgEa4x/?img_index=1",
+        previewImage: rev_post4,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "More coffee isn’t gonna cut it. ☕ Your body needs nutrients. Let RevIVed get you back to your energized self. Click the link in our bio to book today! 🤍"
       },
       {
         type: "social-media",
-        platform: "tiktok",
-        title: "TikTok Viral Health Tips",
-        description: "Educational TikTok content about IV therapy benefits and wellness tips. One video achieved 150K+ views, significantly boosting brand awareness among target demographic.",
-        link: "https://www.tiktok.com/@revivedkansas/video/7570579861958348046",
-        previewImage: "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
+        platform: "instagram",
+        title: "post5",
+        description: "",
+        link: "https://www.instagram.com/p/DQuYY_GDgRz/?img_index=1",
+        previewImage: rev_post5,
         authorName: "revIVed Kansas",
         authorUsername: "@revivedks_mobileivtherapy",
-        postText: "POV: You're getting IV therapy for the first time 💧✨ The process is so relaxing and the energy boost is REAL! #IVTherapy #Wellness #SelfCare #Kansas #Health"
+        postText: "Our fall favorite IM pick is the Tri-Immune Blend. Your go-to boost to fight off those seasonal sniffles.🤍✨🤧"
       },
       {
-        type: "marketing-result",
-        title: "Google Ads Campaign Results",
-        description: "Targeted Google Ads focusing on 'IV therapy Kansas City' and related keywords. Achieved 4.2% CTR with 85% conversion rate from ad clicks to bookings.",
-        link: "https://ads.google.com/campaign-example",
-        metrics: {
-          "Click-through Rate": "4.2%",
-          "Conversion Rate": "85%", 
-          "Total Clicks": "1,847",
-          "Cost per Conversion": "$23.50"
-        }
+        type: "social-media",
+        platform: "instagram",
+        title: "post6",
+        description: "",
+        link: "https://www.instagram.com/p/DObfJrojlk2/",
+        previewImage: rev_post6,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "The 5 R’s of wellness: Rehydrate. Refresh. Recover. Recharge… and finally, get RevIVed. We’ll bring the IV straight to you so you can get to feeling your best — fast. Click the link in our bio to book today & let’s get you RevIVed! 🐝💧🤍"
       },
       {
-        type: "marketing-result", 
-        title: "Email Marketing Automation",
-        description: "Automated email sequences for new customers, follow-ups, and wellness education. Maintained 42% open rate and 8.5% click-through rate, well above industry average.",
-        link: "https://mailchimp.com/campaign-example",
-        metrics: {
-          "Open Rate": "42%",
-          "Click Rate": "8.5%",
-          "Total Subscribers": "2,341",
-          "Revenue Generated": "$15,670"
-        }
-      },    
+        type: "social-media",
+        platform: "instagram",
+        title: "post7",
+        description: "",
+        link: "https://www.instagram.com/p/DP1fdCBkfuK/",
+        previewImage: rev_post7,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "No commute needed. Experience the same wellness as a spa without leaving home. Try Revived’s home healing! 🤍🌿"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post8",
+        description: "",
+        link: "https://www.instagram.com/p/DP62x-MkVAp/?img_index=1",
+        previewImage: rev_post8,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "Pumpkin spice is great, but our IVs are the real fall essential. Stay glowing all season long with our fall favorites! 🍂"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post9",
+        description: "",
+        link: "https://www.instagram.com/p/DQHkg4XkWXi/",
+        previewImage: rev_post9,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "The perfect shot take precision — both behind the camera and with IM injections. 📸💉 "
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post10",
+        description: "",
+        link: "https://www.instagram.com/p/DPUIEVEEZpq/?img_index=1",
+        previewImage: rev_post10,
+        authorName: "revIVed Kansas",
+        authorUsername: "@revivedks_mobileivtherapy",
+        postText: "Just booked your IV infusion with us? Here’s the inside scoop on what to do after!📝💧"
+      }
     ]
   },
-  //Ignite
+  // #endregion
+
+  // #region Ignite
   {
     id: "Ignite",
     name: "Ignite Chiropractic and Wellness Clinic",
@@ -118,9 +173,33 @@ export const clients = [
     services: ["Social Media Management", "Content Creation", "Paid Advertising", "Email Marketing"],
     duration: "Ongoing",
     results: "Generated __ social impressions, increased overall following by over __%.",
-    portfolio: []
+    portfolio: [
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post1",
+        description: "",
+        link: "https://www.instagram.com/p/DQ_-BAjjoR0/?img_index=1",
+        previewImage: ign_post1,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "We’re excited to introduce a few more familiar faces you might be seeing around Ignite, starting off with our Head of Marketing, Mariah! ✨"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post2",
+        description: "",
+        link: "https://www.instagram.com/p/DRCvXKPD4gn/",
+        previewImage: ign_post2,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Fascia is the connective tissue that holds your muscles together… and sometimes it holds tension too. Our hands-on myofascial release therapy eases that and helps your body move more freely. 💆‍♀️✨"
+      }
+    ]
 
   }
+  // #endregion
 ];
 
 // Render function for clients gallery
