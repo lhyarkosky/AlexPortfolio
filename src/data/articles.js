@@ -16,10 +16,16 @@ const freshmanwya = new URL("../assets/articles/freshmanwya.jpg", import.meta.ur
 const fallactivities = new URL("../assets/articles/fallactivities.jpg", import.meta.url).href;
 const lifeofpi = new URL("../assets/articles/LifeOfPi.jpg", import.meta.url).href;
 const fambusiness = new URL("../assets/articles/fambusiness.jpg", import.meta.url).href;
-const lyricopera = new URL("../assets/articles/lyricopera.jpg", import.meta.url).href;
+const lyricopera = new URL("../assets/articles/lyricopera.png", import.meta.url).href;
 const chinesegame = new URL("../assets/articles/chinesegame.jpg", import.meta.url).href;
+const plazalights = new URL("../assets/articles/plazalights.jpg", import.meta.url).href;
 // articles.js
 export const articles = [
+  {
+    href: "https://kansascitymag.com/the-ultimate-guide-to-must-see-holiday-light-displays-across-the-metro/",
+    description: "Authored 'The Ultimate Guide to Must-See Holiday Light Displays Across the Metro' for Kansas City Magazine",
+    img: plazalights
+  },
   {
     href: "https://kansascitymag.com/this-19th-century-chinese-game-is-making-a-comeback-across-the-country-and-here-in-kc/",
     description: "Authored 'This 19th-century Chinese game is making a comeback across the country and here in KC' for Kansas City Magazine",
