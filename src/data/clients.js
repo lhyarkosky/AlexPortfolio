@@ -23,6 +23,14 @@ const ignite_grid = new URL("../assets/clients/ignite/ignite_grid.jpg", import.m
 const ignite_logo = new URL("../assets/clients/ignite/ignite_logo.jpg", import.meta.url).href;
 const ign_post1 = new URL("../assets/clients/ignite/ign_post1.png", import.meta.url).href;
 const ign_post2 = new URL("../assets/clients/ignite/ign_post2.png", import.meta.url).href;
+const ign_post3 = new URL("../assets/clients/ignite/ign_post3.png", import.meta.url).href;
+const ign_post4 = new URL("../assets/clients/ignite/ign_post4.png", import.meta.url).href;
+const ign_post5 = new URL("../assets/clients/ignite/ign_post5.png", import.meta.url).href;
+const ign_post6 = new URL("../assets/clients/ignite/ign_post6.png", import.meta.url).href;
+const ign_post7 = new URL("../assets/clients/ignite/ign_post7.png", import.meta.url).href;
+const ign_post8 = new URL("../assets/clients/ignite/ign_post8.png", import.meta.url).href;
+const ign_post9 = new URL("../assets/clients/ignite/ign_post9.png", import.meta.url).href;
+const ign_post10 = new URL("../assets/clients/ignite/ign_post10.png", import.meta.url).href;
 
 export const clients = [
 
@@ -195,9 +203,96 @@ export const clients = [
         authorName: "Ignite chiro and wellness clinic",
         authorUsername: "@ignitechiroandwellness",
         postText: "Fascia is the connective tissue that holds your muscles together… and sometimes it holds tension too. Our hands-on myofascial release therapy eases that and helps your body move more freely. 💆‍♀️✨"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post3",
+        description: "",
+        link: "https://www.instagram.com/p/DRNfpWiD6YH/",
+        previewImage: ign_post3,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Our very own Dr. Elika Izadyar was featured in @boldjourneymag, sharing more about her philosophy, her path to chiropractic care, and the impact she strives to make in our community every day. "
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post4",
+        description: "",
+        link: "https://www.instagram.com/p/DQw0m8ODsi6/?img_index=1",
+        previewImage: ign_post4,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Athletes, don’t let injuries bench you! Our chiropractic treatments help prevent injuries, speed recovery, and improve performance. Swipe to learn more, and remember, these therapies aren’t limited to just the injuries shown! 🏅✨"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post5",
+        description: "",
+        link: "https://www.instagram.com/p/DQUuXluj0Xz/?img_index=1",
+        previewImage: ign_post5,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Winter can make it hard to stick to your normal routine, including chiropractor appointments. But keeping up with care this time of year is more important than ever! 💪"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post6",
+        description: "",
+        link: "https://www.instagram.com/p/DPWl_aljl4K/",
+        previewImage: ign_post6,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Happy Friday! Let’s set next week up for success.🌿 Book your readjustment and keep your wellness on track."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post7",
+        description: "",
+        link: "https://www.instagram.com/p/DPw-n6aj98W/",
+        previewImage: ign_post7,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Not just workouts. Not just adjustments. Chiropractic care is progress toward the best version of you at Ignite. 🙌 🤍"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post8",
+        description: "",
+        link: "https://www.instagram.com/p/DQZry8REUer/",
+        previewImage: ign_post8,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Introducing our Exercise Education Series 💪 We’re going to be breaking down some of the most common gym mistakes, starting off with posture during rows."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post9",
+        description: "",
+        link: "https://www.instagram.com/p/DRpcae1jlVg/?img_index=1",
+        previewImage: ign_post9,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Think chiropractic is just cracking and popping? Swipe to see what really sets it apart. 💆‍♂️➡️"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post10",
+        description: "",
+        link: "https://www.instagram.com/p/DPo8JhYjqnb/",
+        previewImage: ign_post10,
+        authorName: "Ignite chiro and wellness clinic",
+        authorUsername: "@ignitechiroandwellness",
+        postText: "Prevention > reaction. Stay ahead of pain with proactive chiropractic care at Ignite. 🌿🤍"
       }
     ]
-
   }
   // #endregion
 ];
