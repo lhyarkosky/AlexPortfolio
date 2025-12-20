@@ -32,6 +32,12 @@ const ign_post8 = new URL("../assets/clients/ignite/ign_post8.png", import.meta.
 const ign_post9 = new URL("../assets/clients/ignite/ign_post9.png", import.meta.url).href;
 const ign_post10 = new URL("../assets/clients/ignite/ign_post10.png", import.meta.url).href;
 
+//Pulse
+const pulse_logo = new URL("../assets/clients/pulse/pulse_logo.png", import.meta.url).href;
+
+//Seville
+const seville_logo = new URL("../assets/clients/seville/seville_logo.png", import.meta.url).href;
+
 export const clients = [
 
   // #region Guided
@@ -46,6 +52,7 @@ export const clients = [
     portfolio:[]
   },
   // #endregion
+
   // #region Revived
   {
     id: "Revived",
@@ -293,7 +300,35 @@ export const clients = [
         postText: "Prevention > reaction. Stay ahead of pain with proactive chiropractic care at Ignite. 🌿🤍"
       }
     ]
-  }
+  },
+  // #endregion
+  
+  // #region Pulse
+  { id: "Pulse",
+    name: "Phoenix Pulse FC",
+    logo: pulse_logo,
+    description: "Maintaining and updating the instagram account for a professional soccer club based in Phoenix, AZ.",
+    services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
+    duration:["Ongoing"],
+    results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
+    portfolio:[
+
+    ]
+  },
+  // #endregion
+
+  // #region Seville
+  { id: "Seville",
+    name: "Seville Dental Aesthetics",
+    logo: seville_logo,
+    description: "Maintaining and updating the instagram account for this Kansas City-based dental aesthetics business.",
+    services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
+    duration:["Ongoing"],
+    results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
+    portfolio:[
+
+    ]
+  },
   // #endregion
 ];
 
