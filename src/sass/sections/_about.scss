@@ -60,12 +60,15 @@ $about-secondary-color: #e8e1d9d2;  // initial: $secondary-color
 
       &-text {
         text-align: left;
+        font-size: 2rem;
 
         @include respond(tab-port) {
           text-align: left;
+          font-size: 1.75rem;
         }
         @include respond(tab-port-sm) {
           text-align: center;
+          font-size: 1.5rem;
         }
 
         &--important {
