@@ -164,3 +164,5 @@ window.openClientDetail = function(clientId) {
 initArticlesCarousel();
 initMarketingCarousel();
 
+// (Removed website color controls. Edit SCSS in _about.scss to change colors using VS Code's color picker.)
+

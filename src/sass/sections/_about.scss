@@ -1,9 +1,13 @@
+// Edit these two colors directly with VS Code's color picker
+$about-primary-color: #2a1906d8;    // initial: $primary-color
+$about-secondary-color: #e8e1d9d2;  // initial: $secondary-color
+
 #about {
-  background-color: $primary-color;
+  background-color: $about-primary-color;
   background-image: linear-gradient(
     135deg,
-    $primary-color 0%,
-    $secondary-color 100%
+    $about-primary-color 0%,
+    $about-secondary-color 100%
   );
   color: $white-color;
   height: 100%;
@@ -12,6 +16,8 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
   position: relative;
+
+  // (No runtime controls; edit $about-primary-color and $about-secondary-color above)
 
   .container {
     position: relative;
