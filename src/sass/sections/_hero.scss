@@ -42,6 +42,30 @@
     }
   }
 
+  // Fade in the cover image in sync with the background
+  @keyframes fadeInCover {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(6px);
+    }
+  }
+
+  // Mobile variant: no vertical shift
+  @keyframes fadeInCoverMobile {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .container {
     position: relative;
     z-index: 2;
@@ -109,8 +133,11 @@
     object-fit: contain;
     z-index: 3;
     position: relative;
+    opacity: 0; /* start hidden */
+    animation: fadeInCover 1s ease-in forwards; /* fade in with background */
 
     @include respond(phone) {
+      animation: fadeInCoverMobile 1s ease-in forwards;
       max-height: 100%;
     }
   }
@@ -118,7 +145,7 @@
   .hero-cta {
     display: flex;
     position: absolute; /* overlay CTA so image can sit flush */
-    bottom: 2rem;
+    bottom: 4rem;
     left: 17rem; /* align to image's left edge */
     transform: none;
     z-index: 4;
@@ -127,7 +154,10 @@
       font-size: 2.4rem;
 
       @include respond(phone) {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        right: 16rem;
+        left: auto;
+        bottom: -4rem;
       }
     }
   }
