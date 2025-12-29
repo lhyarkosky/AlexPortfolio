@@ -1,5 +1,5 @@
 #hero {
-  min-height: 100vh;
+  min-height: 100vh; /* shorter hero */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -10,9 +10,16 @@
   padding: 0rem 5.6rem;
   margin-bottom: 0;
   position: relative;
-  overflow: hidden;
+        font-size: 1.4rem; /* smaller button text on mobile */
+        padding: 0.6rem 1rem; /* tighter button padding on mobile */
 
   .hero-overlay {
+
+    @include respond(phone) {
+      bottom: 0; /* position at very bottom on mobile */
+      left: 0;   /* far left edge */
+      transform: none;
+    }
     position: absolute;
     top: 0;
     left: 0;
@@ -38,6 +45,10 @@
   .container {
     position: relative;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* push content to bottom so image sits flush */
   }
 
   // Set position sticky so the jumbotron stays fixed while you scroll.
@@ -49,8 +60,15 @@
   background-position: center;
   background-size: cover; */
 
+  @include respond(tab-port) {
+    min-height: 65vh;
+    height: 65vh;
+  }
+
   @include respond(phone) {
     padding: 0rem $default-font-size;
+    min-height: 35vh;
+    height: 35vh; /* reduce further on phones */
   }
 
   .hero-title {
@@ -78,28 +96,32 @@
   .hero-image-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 3.2rem;
+    align-items: flex-end; /* align image to bottom */
+    flex: 1 1 auto; /* fill available vertical space */
+    margin-bottom: 0;
+    position: relative; /* anchor CTA to image left */
   }
 
   .hero-cover-image {
-    max-width: 100%;
+    max-width: 120%;
     height: auto;
-    max-height: 60vh;
+    max-height: 120%; /* allow image to grow to container height */
     object-fit: contain;
     z-index: 3;
     position: relative;
 
     @include respond(phone) {
-      max-height: 40vh;
+      max-height: 100%;
     }
   }
 
   .hero-cta {
     display: flex;
-
-    @include respond(tab-port) {
-      justify-content: center;
-    }
+    position: absolute; /* overlay CTA so image can sit flush */
+    bottom: 2rem;
+    left: 17rem; /* align to image's left edge */
+    transform: none;
+    z-index: 4;
 
     & a {
       font-size: 2.4rem;
