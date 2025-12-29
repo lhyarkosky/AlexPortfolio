@@ -1,9 +1,23 @@
 
 // Grid pictures for client headers (keeping only used assets)
 
+import { post } from "jquery";
+import { type } from "os";
+
 //Guided:
 const guided_grid= new URL("../assets/clients/guidedbyg/guided_grid.jpg", import.meta.url).href;
 const guided_logo = new URL("../assets/clients/guidedbyg/guided_logo.jpg", import.meta.url).href;
+const guided_post1 = new URL("../assets/clients/guidedbyg/guided_post1.png", import.meta.url).href;
+const guided_post2 = new URL("../assets/clients/guidedbyg/guided_post2.png", import.meta.url).href;
+const guided_post3 = new URL("../assets/clients/guidedbyg/guided_post3.png", import.meta.url).href;
+const guided_post4 = new URL("../assets/clients/guidedbyg/guided_post4.png", import.meta.url).href;
+const guided_post5 = new URL("../assets/clients/guidedbyg/guided_post5.png", import.meta.url).href;
+const guided_post6 = new URL("../assets/clients/guidedbyg/guided_post6.png", import.meta.url).href;
+const guided_post7 = new URL("../assets/clients/guidedbyg/guided_post7.png", import.meta.url).href;
+const guided_post8 = new URL("../assets/clients/guidedbyg/guided_post8.png", import.meta.url).href;
+const guided_post9 = new URL("../assets/clients/guidedbyg/guided_post9.png", import.meta.url).href;
+const guided_post10 = new URL("../assets/clients/guidedbyg/guided_post10.png", import.meta.url).href;
+
 //Revived
 const rev_grid = new URL("../assets/clients/revived/rev_grid.png", import.meta.url).href;
 const revivedlogo = new URL("../assets/clients/revived/logo.jpg", import.meta.url).href;
@@ -34,9 +48,27 @@ const ign_post10 = new URL("../assets/clients/ignite/ign_post10.png", import.met
 
 //Pulse
 const pulse_logo = new URL("../assets/clients/pulse/pulse_logo.png", import.meta.url).href;
+const pulse_post1 = new URL("../assets/clients/pulse/pulse_post1.png", import.meta.url).href;
+const pulse_post2 = new URL("../assets/clients/pulse/pulse_post2.png", import.meta.url).href;
+const pulse_post3 = new URL("../assets/clients/pulse/pulse_post3.png", import.meta.url).href;
+const pulse_post4 = new URL("../assets/clients/pulse/pulse_post4.png", import.meta.url).href;
+const pulse_post5 = new URL("../assets/clients/pulse/pulse_post5.png", import.meta.url).href;
+const pulse_post6 = new URL("../assets/clients/pulse/pulse_post6.png", import.meta.url).href;
+const pulse_post7 = new URL("../assets/clients/pulse/pulse_post7.png", import.meta.url).href;
+const pulse_post8 = new URL("../assets/clients/pulse/pulse_post8.png", import.meta.url).href;
 
 //Seville
 const seville_logo = new URL("../assets/clients/seville/seville_logo.png", import.meta.url).href;
+const sev_post1 = new URL("../assets/clients/seville/sev_post1.png", import.meta.url).href;
+const sev_post2 = new URL("../assets/clients/seville/sev_post2.png", import.meta.url).href;
+const sev_post3 = new URL("../assets/clients/seville/sev_post3.png", import.meta.url).href;
+const sev_post4 = new URL("../assets/clients/seville/sev_post4.png", import.meta.url).href;
+const sev_post5 = new URL("../assets/clients/seville/sev_post5.png", import.meta.url).href;
+const sev_post6 = new URL("../assets/clients/seville/sev_post6.png", import.meta.url).href;
+const sev_post7 = new URL("../assets/clients/seville/sev_post7.png", import.meta.url).href;
+const sev_post8 = new URL("../assets/clients/seville/sev_post8.png", import.meta.url).href;
+const sev_post9 = new URL("../assets/clients/seville/sev_post9.png", import.meta.url).href;
+const sev_post10 = new URL("../assets/clients/seville/sev_post10.png", import.meta.url).href;
 
 export const clients = [
 
@@ -49,7 +81,117 @@ export const clients = [
     services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
     duration:["Ongoing"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
-    portfolio:[]
+    portfolio:[
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post1",
+        description: "",
+        link: "https://www.instagram.com/p/DSsGMDsDaMj/?img_index=1",
+        previewImage: guided_post1,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Guided’s Digital Christmas Card 🎄🤍✨",
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post2",
+        description: "",
+        link: "https://www.instagram.com/p/DSBAPMyDxG4/",
+        previewImage: guided_post2,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "So proud that Justin Reid’s My Cause My Cleats were custom designed by Guided By G’s very own Kasten Green. Seeing such meaningful cleats on Justin’s feet representing @jreidindeed AND watching him get a pick six in them. Couldn’t ask for a cooler moment for our team.",
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post3",
+        description: "",
+        link: "https://www.instagram.com/reel/DRiHVQbDvGs/",
+        previewImage: guided_post3,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "A glimpse with @doctoranna_wilson 📸🦷💄"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post4",
+        description: "",
+        link: "https://www.instagram.com/p/DSF-0ARj5e4/?img_index=1",
+        previewImage: guided_post4,
+        postText: "From a full November to an even bigger December. Let’s keep the momentum going."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post5",
+        description: "",
+        link: "https://www.instagram.com/p/DQuvSw9DVLz/?img_index=1",
+        previewImage: guided_post5,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Three more years in KC!! 🤍🙌  Huge congrats to @lomomma on re-signing with the @kccurrent! From the USWNT to leading the Current to another record-breaking season, watching you continue to make history has been such a privilege. We are so proud to be just a little part of the journey."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post6",
+        description: "",
+        link: "https://www.instagram.com/p/DQZ_qpMD3MJ/?img_index=1",
+        previewImage: guided_post6,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "You’ve seen the flyer. Now let’s get started so you can see the results. We specialize in branding for athletes and businesses ready to transform their ideas into impact. As the year comes to a close, it’s the perfect time to start thinking about how you can grow in the new year."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post7",
+        description: "",
+        link: "https://www.instagram.com/p/DPe2Fb0D_OD/?img_index=1",
+        previewImage: guided_post7,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "This is your sign to stop waiting and start building💌 We’re now taking on new business clients!!!"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post8",
+        description: "",
+        link: "https://www.instagram.com/p/DOymTyODRzi/",
+        previewImage: guided_post8,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Gratitude fuels growth. Thankful for every step as we bring our guided vision to life. 🤍"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post9",
+        description: "",
+        link: "https://www.instagram.com/p/DP6v9_pDRYp/?img_index=1",
+        previewImage: guided_post9,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Officially bringing our portfolio to the gram!! At Guided, we bridge athletes and brands to build organic, meaningful partnerships, and we want to share that with you. We’re kicking things off strong with one of our favorites: Kansas City Current’s own celly queen, Lo’eau LaBonta, in collaboration with Fabletics. Celebrating strong, active women who lead with movement, confidence, and authenticity. 🙌 🤍"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post10",
+        description: "",
+        link: "https://www.instagram.com/p/DP1c1Gija2U/",
+        previewImage: guided_post10,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Yes, @trent_mcduffie and HCA seriously had this much fun at their 75th Anniversary Gala!!"
+      }
+      
+    ]
   },
   // #endregion
 
@@ -312,7 +454,94 @@ export const clients = [
     duration:["Ongoing"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[
-
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post1",
+        description: "",
+        link: "https://www.instagram.com/p/DSf54f-EoPC/",
+        previewImage: pulse_post1,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "Christmas came early!! ⚽🔥 Here’s our full 2026 schedule. Get ready for an exciting season ahead!"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post2",
+        description: "",
+        link: "https://www.instagram.com/p/DSSxqcvDxhT/",
+        previewImage: pulse_post2,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "We can’t stop talking about this schedule drop… and honestly, we don’t want to. Hope you’re as excited as we are — it’s almost time. 🕑🔥"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post3",
+        description: "",
+        link: "https://www.instagram.com/p/DSVRqYXD0H5/",
+        previewImage: pulse_post3,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "Hopefully you’ve heard by now, but if not, here’s your reminder. MLIS Men’s & Women’s Finals are headed to the Orleans Arena in Las Vegas, March 28-29, 2026. ✨🏆"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post4",
+        description: "",
+        link: "https://www.instagram.com/p/DSK5CHJjzRG/",
+        previewImage: pulse_post4,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "Locked in… every session pushes us closer to January. 🔒"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post5",
+        description: "",
+        link: "https://www.instagram.com/p/DSsQjFgFRQz/",
+        previewImage: pulse_post5,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "From our Pulse family to yours, Happy Holidays! 🎄⚽️"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post6",
+        description: "",
+        link: "https://www.instagram.com/p/DSIiTGTkjT7/",
+        previewImage: pulse_post6,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "Here’s the 2026–27 landscape. The WMLIS is stacked, competitive, and full of talent. These are the teams we’ll battle all year long."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post7",
+        description: "",
+        link: "https://www.instagram.com/p/DR5BTZHjwtk/",
+        previewImage: pulse_post7,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "Official Partnership Announcement! Phoenix Pulse FC is proud to welcome @zonarehab as an official partner this season! Together, we’re supporting our athletes and building a stronger, healthier soccer community."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post8",
+        description: "",
+        link: "https://www.instagram.com/p/DR2PRw7kSky/",
+        previewImage: pulse_post8,
+        authorName: "Phoenix Pulse FC",
+        authorUsername: "@phxpulsefc",
+        postText: "The work has started. The season is almost here. January can’t come soon enough. 🌵⚽️"
+      }
     ]
   },
   // #endregion
@@ -326,7 +555,116 @@ export const clients = [
     duration:["Ongoing"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[
-
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post1",
+        description: "",
+        link: "https://www.instagram.com/p/DOeyXLXkfOc/?img_index=1",
+        previewImage: sev_post1,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Let’s chat cavities 🦷🪥",
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post2",
+        description: "",
+        link: "https://www.instagram.com/p/DObK-Z0jgFS/",
+        previewImage: sev_post2,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Be confident in your smile 🤍 you’re just a call away ✨"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post3",
+        description: "",
+        link: "https://www.instagram.com/p/DRDADqfjvQa/",
+        previewImage: sev_post3,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Busy doing what I love 💁🏻‍♀️"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post4",
+        description: "",
+        link: "https://www.instagram.com/p/DR4nPBZDiRF/?img_index=1",
+        previewImage: sev_post4,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "In case you needed more reasons to book for your dream smile 😉"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post5",
+        description: "",
+        link: "https://www.instagram.com/p/DRApwpXEW28/?img_index=1",
+        previewImage: sev_post5,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "What are Veneers and Implants? 🦷✨"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post6",
+        description: "",
+        link: "https://www.instagram.com/p/DRsbkQBEsjQ/?img_index=1",
+        previewImage: sev_post6,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "A great holiday stocking stuffer idea… professional whitening. One for you, one for your partner 🎁🦷 "
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post7",
+        description: "",
+        link: "https://www.instagram.com/p/DSaz8zukVUM/?img_index=1",
+        previewImage: sev_post7,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Treat yourself and whoever else you love with the gift of Seville✨🦷🎁"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post8",
+        description: "",
+        link: "https://www.instagram.com/p/DSVYsJxjlke/?img_index=1",
+        previewImage: sev_post8,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Doing what we love for people we love 🦷🫶🏼"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post9",
+        description: "",
+        link: "https://www.instagram.com/p/DO6MqGIDokY/?img_index=1",
+        previewImage: sev_post9,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Part one of why dental plants are beneficial for your smile ✨🦷"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post10",
+        description: "",
+        link: "https://www.instagram.com/p/DPl3CoiEdyK/",
+        previewImage: sev_post10,
+        authorName: "Seville Dental Aesthetics",
+        authorUsername: "@seville_dental_aesthetics",
+        postText: "Doing what I love daily 🤍✨"
+      }
     ]
   },
   // #endregion

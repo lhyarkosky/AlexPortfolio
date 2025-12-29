@@ -75,6 +75,25 @@
     }
   }
 
+  .hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .hero-cover-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    z-index: 3;
+    position: relative;
+
+    @include respond(phone) {
+      max-height: 40vh;
+    }
+  }
+
   .hero-cta {
     display: flex;
 

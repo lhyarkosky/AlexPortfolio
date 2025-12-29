@@ -5,7 +5,7 @@
   "description": "A clean, beautiful and responsive portfolio template for Developers!",
   "source": [
     "src/index.html",
-    "src/articlesgallery.html", 
+    "src/articlesgallery.html",
     "src/socialmediagallery.html",
     "src/othergallery.html",
     "src/project-gallery.html",
@@ -30,6 +30,7 @@
     "@parcel/transformer-sass": "^2.8.2",
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.8.2",
     "prettier": "^2.8.1"
   },
