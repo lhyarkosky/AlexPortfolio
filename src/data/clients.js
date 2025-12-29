@@ -79,7 +79,7 @@ export const clients = [
     gridPicture: guided_grid,
     description: "Maintaining and updating the instagram account for this Kansas City-based marketing agency.",
     services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
-    duration:["Ongoing"],
+    duration: ["September 2025 - present"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[
       {
@@ -205,7 +205,7 @@ export const clients = [
     gridPicture: rev_grid,
     description: "Comprehensive digital marketing campaign for an IV therapy business based in Kansas City.",
     services: ["Social Media Strategy", "Content Creation", "Brand Development", "Paid Advertising", "Email Marketing", "4 posts a week"],
-    duration: "8 months",
+    duration: ["September 2025 - present"],
     results: "Generated 2.3M+ social impressions, 4,500 qualified leads, increased overall following by over 250%",
     portfolio: [
       {
@@ -330,7 +330,7 @@ export const clients = [
     gridPicture: ignite_grid,
     description: "Developed and executed a multi-channel digital marketing strategy for a chiropractic and wellness clinic in Kansas City.",
     services: ["Social Media Management", "Content Creation", "Paid Advertising", "Email Marketing"],
-    duration: "Ongoing",
+    duration: "September 2025 - present",
     results: "Generated __ social impressions, increased overall following by over __%.",
     portfolio: [
       {
@@ -453,7 +453,7 @@ export const clients = [
     logo: pulse_logo,
     description: "Maintaining and updating the instagram account for a professional soccer club based in Phoenix, AZ.",
     services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
-    duration:["Ongoing"],
+    duration:["November 2025 - present"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[
       {
@@ -554,7 +554,7 @@ export const clients = [
     logo: seville_logo,
     description: "Maintaining and updating the instagram account for this Kansas City-based dental aesthetics business.",
     services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
-    duration:["Ongoing"],
+    duration:["August 2025 - present"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[
       {
