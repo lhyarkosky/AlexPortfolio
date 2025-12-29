@@ -122,6 +122,8 @@ export const clients = [
         description: "",
         link: "https://www.instagram.com/p/DSF-0ARj5e4/?img_index=1",
         previewImage: guided_post4,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
         postText: "From a full November to an even bigger December. Let’s keep the momentum going."
       },
       {
