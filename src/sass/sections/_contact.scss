@@ -1,8 +1,12 @@
 #contact {
+  // Edit these to adjust the contact section colors (VS Code color picker friendly)
+  $contact-secondary-color: #2a1906d8;   // initial: $primary-color
+  $contact-primary-color: #e8e1d9d2; // initial: $secondary-color
+
   background-image: linear-gradient(
     135deg,
-    $primary-color 0%,
-    $secondary-color 100%
+    $contact-primary-color 0%,
+    $contact-secondary-color 100%
   );
   -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);

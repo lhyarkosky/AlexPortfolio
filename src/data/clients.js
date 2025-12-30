@@ -72,139 +72,14 @@ const sev_post10 = new URL("../assets/clients/seville/sev_post10.png", import.me
 
 export const clients = [
 
-  // #region Guided
-  { id: "guidedbyg",
-    name: "Guided By G",
-    logo: guided_logo,
-    gridPicture: guided_grid,
-    description: "Maintaining and updating the instagram account for this Kansas City-based marketing agency.",
-    services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
-    duration: ["September 2025 - present"],
-    results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
-    portfolio:[
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post1",
-        description: "",
-        link: "https://www.instagram.com/p/DSsGMDsDaMj/?img_index=1",
-        previewImage: guided_post1,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "Guided’s Digital Christmas Card 🎄🤍✨",
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post2",
-        description: "",
-        link: "https://www.instagram.com/p/DSBAPMyDxG4/",
-        previewImage: guided_post2,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "So proud that Justin Reid’s My Cause My Cleats were custom designed by Guided By G’s very own Kasten Green. Seeing such meaningful cleats on Justin’s feet representing @jreidindeed AND watching him get a pick six in them. Couldn’t ask for a cooler moment for our team.",
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post3",
-        description: "",
-        link: "https://www.instagram.com/reel/DRiHVQbDvGs/",
-        previewImage: guided_post3,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "A glimpse with @doctoranna_wilson 📸🦷💄"
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post4",
-        description: "",
-        link: "https://www.instagram.com/p/DSF-0ARj5e4/?img_index=1",
-        previewImage: guided_post4,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "From a full November to an even bigger December. Let’s keep the momentum going."
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post5",
-        description: "",
-        link: "https://www.instagram.com/p/DQuvSw9DVLz/?img_index=1",
-        previewImage: guided_post5,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "Three more years in KC!! 🤍🙌  Huge congrats to @lomomma on re-signing with the @kccurrent! From the USWNT to leading the Current to another record-breaking season, watching you continue to make history has been such a privilege. We are so proud to be just a little part of the journey."
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post6",
-        description: "",
-        link: "https://www.instagram.com/p/DQZ_qpMD3MJ/?img_index=1",
-        previewImage: guided_post6,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "You’ve seen the flyer. Now let’s get started so you can see the results. We specialize in branding for athletes and businesses ready to transform their ideas into impact. As the year comes to a close, it’s the perfect time to start thinking about how you can grow in the new year."
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post7",
-        description: "",
-        link: "https://www.instagram.com/p/DPe2Fb0D_OD/?img_index=1",
-        previewImage: guided_post7,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "This is your sign to stop waiting and start building💌 We’re now taking on new business clients!!!"
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post8",
-        description: "",
-        link: "https://www.instagram.com/p/DOymTyODRzi/",
-        previewImage: guided_post8,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "Gratitude fuels growth. Thankful for every step as we bring our guided vision to life. 🤍"
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post9",
-        description: "",
-        link: "https://www.instagram.com/p/DP6v9_pDRYp/?img_index=1",
-        previewImage: guided_post9,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "Officially bringing our portfolio to the gram!! At Guided, we bridge athletes and brands to build organic, meaningful partnerships, and we want to share that with you. We’re kicking things off strong with one of our favorites: Kansas City Current’s own celly queen, Lo’eau LaBonta, in collaboration with Fabletics. Celebrating strong, active women who lead with movement, confidence, and authenticity. 🙌 🤍"
-      },
-      {
-        type: "social-media",
-        platform: "instagram",
-        title: "post10",
-        description: "",
-        link: "https://www.instagram.com/p/DP1c1Gija2U/",
-        previewImage: guided_post10,
-        authorName: "Guided By G Agency",
-        authorUsername: "@guidedbygagency",
-        postText: "Yes, @trent_mcduffie and HCA seriously had this much fun at their 75th Anniversary Gala!!"
-      }
-      
-    ]
-  },
-  // #endregion
-
   // #region Revived
   {
     id: "Revived",
-    name: "revIVed Kansas - Mobile IV & IM Therapy ",
+    name: "RevIVed Kansas - Mobile IV & IM Therapy ",
     logo: revivedlogo,
     gridPicture: rev_grid,
     description: "Comprehensive digital marketing campaign for an IV therapy business based in Kansas City.",
-    services: ["Social Media Strategy", "Content Creation", "Brand Development", "Paid Advertising", "Email Marketing", "4 posts a week"],
+    services: ["Social Media Management", "3-4 Weekly Posts", "Content Creation and Design", "Brand Ambassador Program"],
     duration: ["September 2025 - present"],
     results: "Generated 2.3M+ social impressions, 4,500 qualified leads, increased overall following by over 250%",
     portfolio: [
@@ -329,7 +204,7 @@ export const clients = [
     logo: ignite_logo,
     gridPicture: ignite_grid,
     description: "Developed and executed a multi-channel digital marketing strategy for a chiropractic and wellness clinic in Kansas City.",
-    services: ["Social Media Management", "Content Creation", "Paid Advertising", "Email Marketing"],
+    services: ["Social Media Management", "3-4 Weekly Posts", "Content Creation and Design", "Brand Ambassador Program"],
     duration: "September 2025 - present",
     results: "Generated __ social impressions, increased overall following by over __%.",
     portfolio: [
@@ -446,13 +321,138 @@ export const clients = [
     ]
   },
   // #endregion
-  
+
+  // #region Guided
+  { id: "guidedbyg",
+    name: "Guided By G",
+    logo: guided_logo,
+    gridPicture: guided_grid,
+    description: "Maintaining and updating the instagram account for this Kansas City-based marketing agency.",
+    services: ["Social Media Management", "Weekly Posting", "Content Creation and Design", "Paid Advertisements"],
+    duration: ["September 2025 - present"],
+    results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
+    portfolio:[
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post1",
+        description: "",
+        link: "https://www.instagram.com/p/DSsGMDsDaMj/?img_index=1",
+        previewImage: guided_post1,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Guided’s Digital Christmas Card 🎄🤍✨",
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post2",
+        description: "",
+        link: "https://www.instagram.com/p/DSBAPMyDxG4/",
+        previewImage: guided_post2,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "So proud that Justin Reid’s My Cause My Cleats were custom designed by Guided By G’s very own Kasten Green. Seeing such meaningful cleats on Justin’s feet representing @jreidindeed AND watching him get a pick six in them. Couldn’t ask for a cooler moment for our team.",
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post3",
+        description: "",
+        link: "https://www.instagram.com/reel/DRiHVQbDvGs/",
+        previewImage: guided_post3,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "A glimpse with @doctoranna_wilson 📸🦷💄"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post4",
+        description: "",
+        link: "https://www.instagram.com/p/DSF-0ARj5e4/?img_index=1",
+        previewImage: guided_post4,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "From a full November to an even bigger December. Let’s keep the momentum going."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post5",
+        description: "",
+        link: "https://www.instagram.com/p/DQuvSw9DVLz/?img_index=1",
+        previewImage: guided_post5,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Three more years in KC!! 🤍🙌  Huge congrats to @lomomma on re-signing with the @kccurrent! From the USWNT to leading the Current to another record-breaking season, watching you continue to make history has been such a privilege. We are so proud to be just a little part of the journey."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post6",
+        description: "",
+        link: "https://www.instagram.com/p/DQZ_qpMD3MJ/?img_index=1",
+        previewImage: guided_post6,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "You’ve seen the flyer. Now let’s get started so you can see the results. We specialize in branding for athletes and businesses ready to transform their ideas into impact. As the year comes to a close, it’s the perfect time to start thinking about how you can grow in the new year."
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post7",
+        description: "",
+        link: "https://www.instagram.com/p/DPe2Fb0D_OD/?img_index=1",
+        previewImage: guided_post7,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "This is your sign to stop waiting and start building💌 We’re now taking on new business clients!!!"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post8",
+        description: "",
+        link: "https://www.instagram.com/p/DOymTyODRzi/",
+        previewImage: guided_post8,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Gratitude fuels growth. Thankful for every step as we bring our guided vision to life. 🤍"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post9",
+        description: "",
+        link: "https://www.instagram.com/p/DP6v9_pDRYp/?img_index=1",
+        previewImage: guided_post9,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Officially bringing our portfolio to the gram!! At Guided, we bridge athletes and brands to build organic, meaningful partnerships, and we want to share that with you. We’re kicking things off strong with one of our favorites: Kansas City Current’s own celly queen, Lo’eau LaBonta, in collaboration with Fabletics. Celebrating strong, active women who lead with movement, confidence, and authenticity. 🙌 🤍"
+      },
+      {
+        type: "social-media",
+        platform: "instagram",
+        title: "post10",
+        description: "",
+        link: "https://www.instagram.com/p/DP1c1Gija2U/",
+        previewImage: guided_post10,
+        authorName: "Guided By G Agency",
+        authorUsername: "@guidedbygagency",
+        postText: "Yes, @trent_mcduffie and HCA seriously had this much fun at their 75th Anniversary Gala!!"
+      }
+      
+    ]
+  },
+  // #endregion
+
   // #region Pulse
   { id: "Pulse",
     name: "Phoenix Pulse FC",
     logo: pulse_logo,
     description: "Maintaining and updating the instagram account for a professional soccer club based in Phoenix, AZ.",
-    services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
+    services: ["Social Media Management", "2-3 Weekly Posts", "Content Creation and Design"],
     duration:["November 2025 - present"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[
@@ -553,7 +553,7 @@ export const clients = [
     name: "Seville Dental Aesthetics",
     logo: seville_logo,
     description: "Maintaining and updating the instagram account for this Kansas City-based dental aesthetics business.",
-    services: ["Social Media Management", "Weekly Content Creation","Photo and Video Editing", "Overseeing Post Insights"],
+    services: ["Weekly Posting", "Content Creation and Design"],
     duration:["August 2025 - present"],
     results: "Feuled consistent growth in follower engagement and brand visibility. Specifically, __% growth in interactions and __% increase in follower count.",
     portfolio:[

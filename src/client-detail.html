@@ -97,6 +97,13 @@
         max-width: 1700px;
         margin: 0 auto;
       }
+
+      /* Center header when there is no grid picture */
+      .client-header-wrapper.no-grid-picture {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
       
       .client-header-main {
         padding: 3rem;
@@ -114,16 +121,17 @@
       }
       
       .client-logo-section {
-        text-align: left;
+        text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
       }
       
       .client-logo-large {
         width: 120px;
         height: 120px;
-        margin: 0 0 2rem 0;
+        margin: 0 auto 2rem;
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -146,7 +154,7 @@
         font-size: 3rem;
         font-weight: bold;
         color: white;
-        margin: 0 0 2rem 0;
+        margin: 0 auto 2rem;
       }
       
       .client-grid-picture {
@@ -180,14 +188,15 @@
       }
       
       .client-name {
-        font-size: 2.5rem;
+        font-size: 5rem; /* Adjust client name size */
         font-weight: bold;
         color: #696159;
         margin-bottom: 1rem;
+        align-items: center;
       }
       
       .client-description {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Adjust description text size */
         color: #7C7670;
         max-width: 600px;
         margin: 0 auto 2rem;
@@ -207,6 +216,7 @@
       }
       
       .meta-label {
+        font-size: 2rem; /* Adjust meta labels (Duration, etc.) */
         font-weight: bold;
         color: #333;
         display: block;
@@ -214,6 +224,7 @@
       }
       
       .meta-value {
+        font-size: 1.25rem; /* Adjust meta values (duration value, etc.) */
         color: #666;
       }
       
@@ -230,7 +241,7 @@
         padding: 0.5rem 1rem;
         border-radius: 25px;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 1.5rem; /* Adjust service badge text size */
       }
       
       .client-portfolio {
@@ -972,49 +983,7 @@
         gap: 0.5rem;
       }
       
-      .client-results {
-        background: linear-gradient(135deg, #9F9F9F 0%, #E8E1D9 100%);
-        color: white;
-        padding: 3rem;
-        border-radius: 15px;
-        text-align: center;
-      }
-      
-      .results-title {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .results-text {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        line-height: 1.6;
-      }
-      
-      .testimonial {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 2rem;
-        border-radius: 10px;
-        margin-top: 2rem;
-      }
-      
-      .testimonial-text {
-        font-size: 1.2rem;
-        font-style: italic;
-        margin-bottom: 1rem;
-        line-height: 1.6;
-      }
-      
-      .testimonial-author {
-        font-weight: bold;
-        font-size: 1rem;
-      }
 
-      
-
-      
-
-      
       /* Responsive Design */
       @media (max-width: 768px) {
         .client-header-wrapper {
@@ -1140,15 +1109,16 @@
         const gridPictureHtml = client.gridPicture 
           ? `<div class="client-grid-picture"><img src="${client.gridPicture}" alt="${client.name} showcase" /></div>`
           : '';
+
+        const headerWrapperClass = gridPictureHtml ? 'client-header-wrapper' : 'client-header-wrapper no-grid-picture';
         
         headerContainer.innerHTML = `
-          <div class="client-header-wrapper">
+          <div class="${headerWrapperClass}">
             <div class="client-header-main">
               <div class="client-header-content">
                 <div class="client-logo-section">
                   ${logoHtml}
                   <h1 class="client-name">${client.name}</h1>
-                  <p class="client-description">${client.description}</p>
                 </div>
               </div>
               <div class="client-meta">
@@ -1157,8 +1127,6 @@
                   <span class="meta-value">${client.duration}</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">Services</span>
-                  <span class="meta-value">${client.services.length} services</span>
                 </div>
               </div>
               <div class="services-list">
@@ -1371,22 +1339,22 @@
           initPortfolioCarousel(client.portfolio.length);
         }
         
-        // Render results and testimonial
-        const resultsContainer = document.getElementById('client-results');
-        if (resultsContainer) {
-          const testimonialHtml = client.testimonial ? `
-            <div class="testimonial">
-              <p class="testimonial-text">"${client.testimonial.text}"</p>
-              <p class="testimonial-author">— ${client.testimonial.author}</p>
-            </div>
-          ` : '';
+        // // Render results and testimonial
+        // const resultsContainer = document.getElementById('client-results');
+        // if (resultsContainer) {
+        //   const testimonialHtml = client.testimonial ? `
+        //     <div class="testimonial">
+        //       <p class="testimonial-text">"${client.testimonial.text}"</p>
+        //       <p class="testimonial-author">— ${client.testimonial.author}</p>
+        //     </div>
+        //   ` : '';
           
-          resultsContainer.innerHTML = `
-            <h3 class="results-title">Results & Impact</h3>
-            <p class="results-text">${client.results}</p>
-            ${testimonialHtml}
-          `;
-        }
+        //   resultsContainer.innerHTML = `
+        //     <h3 class="results-title">Results & Impact</h3>
+        //     <p class="results-text">${client.results}</p>
+        //     ${testimonialHtml}
+        //   `;
+        // }
         
         // Store client data for modal
         window.currentClient = client;
